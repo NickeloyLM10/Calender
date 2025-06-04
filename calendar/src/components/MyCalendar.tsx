@@ -25,7 +25,7 @@ type HolidayEvent = {
   start: string
   end: string
   allDay: boolean
-  backgroundColor: string
+  background: string
 }
 
 function CalendarApp() {
@@ -43,7 +43,7 @@ function CalendarApp() {
     ],
     events: [],
     plugins: [eventsPlugin],
-    defaultView: 'month',
+    defaultView: 'monthGrid',
   })
 
   useEffect(() => {
@@ -69,7 +69,6 @@ function CalendarApp() {
           start: h.date,
           end: h.date,
           allDay: true,
-          backgroundColor: '#add8e6', // light blue
         }))
 
         const weekMap: { [weekKey: string]: number } = {}
@@ -93,13 +92,14 @@ function CalendarApp() {
             start,
             end,
             allDay: true,
-            backgroundColor: '', // not needed now
-            display: 'background', // KEY
-            className: count > 1 ? 'dark-green-bg' : 'light-green-bg' // Custom classes
+            background: '#f0f0f0',
           }
         })
 
+        console.log('Events fetched:', holidayEvents)
+        console.log('Events sent to plugin:', ...weekHighlights)
         eventsPlugin.set([...holidayEvents, ...weekHighlights])
+
       } catch (err) {
         console.error(err)
         setError('Failed to fetch holidays')
