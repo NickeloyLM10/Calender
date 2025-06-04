@@ -1,0 +1,25 @@
+.highlight-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0; /* behind calendar */
+}
+
+.week-highlight {
+  position: absolute;
+  height: 100px; /* approximate height of a week row */
+  width: 100%;
+}
+
+.light-green-bg {
+  background-color: #90ee90;
+  opacity: 0.3;
+}
+
+.dark-green-bg {
+  background-color: #006400;
+  opacity: 0.3;
+}
