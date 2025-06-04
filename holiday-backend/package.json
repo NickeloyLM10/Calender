@@ -1,0 +1,19 @@
+{
+  "name": "holiday-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@schedule-x/react": "^2.32.0",
+    "cors": "^2.8.5",
+    "date-holidays": "^3.24.3",
+    "date-holidays-parser": "^3.4.7",
+    "express": "^5.1.0"
+  },
+  "description": ""
+}
